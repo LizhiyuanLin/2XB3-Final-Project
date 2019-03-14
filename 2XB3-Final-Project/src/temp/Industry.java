@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 
 
-public class Industry{
+public class Industry implements Comparable<Industry>{
 	
 	private final Double HourlyEarn;
 	private final Double WorkHour;
