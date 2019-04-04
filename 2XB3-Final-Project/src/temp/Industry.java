@@ -307,15 +307,24 @@ public class Industry implements Comparable<Industry> {
 				JOptionPane.QUESTION_MESSAGE, null, location, location[0]);
 
 		int counter = -1;
-		ArrayList<Double> finalInd = new ArrayList();
+		ArrayList<Double> IndHE = new ArrayList();
+		ArrayList<Double> IndWH = new ArrayList();
 		for (Industry ind : test) {
 			if ((ind.region.compareTo(sltLocation) == 0) && (ind.Name.compareTo(sltName) == 0)) {
 				if (ind.HourlyEarn - 0.0 < 0.00001) {
-					finalInd.add(finalInd.get(counter));
+					IndHE.add(IndHE.get(counter));
 				}
 				else {
-					finalInd.add(ind.HourlyEarn);
+					IndHE.add(ind.HourlyEarn);
 				}
+				
+				if (ind.WorkHour - 0.0 < 0.00001) {
+					IndWH.add(IndWH.get(counter));
+				}
+				else {
+					IndWH.add(ind.WorkHour);
+				}
+				
 				counter++;
 			}
 		}
@@ -324,8 +333,15 @@ public class Industry implements Comparable<Industry> {
 		StdDraw.setYscale(0, 100);
 		StdDraw.text(6, 80, sltName + " industry hourly wage trend");
 		for (int i = 0; i < 12; i++) {
-			StdDraw.line(i, finalInd.get(i), i + 1, finalInd.get(i + 1));
+			StdDraw.line(i, IndHE.get(i), i + 1, IndHE.get(i + 1));
 		}
+		StdDraw.save("Data/wage trend.jpg");
+		StdDraw.clear();
+		StdDraw.text(6, 80, sltName + " industry work hour trend");
+		for (int i = 0; i < 12; i++) {
+			StdDraw.line(i, IndWH.get(i), i + 1, IndWH.get(i + 1));
+		}
+		StdDraw.save("Data/work hour.jpg");
 
 		Hourlyearning.close();
 		WeeklyHour.close();
