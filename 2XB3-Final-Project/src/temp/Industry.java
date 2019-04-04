@@ -121,7 +121,7 @@ public class Industry implements Comparable<Industry>{
 			line2 = WeeklyHour.readLine();
 			
 		}
-		//Distribute the 
+		//Distribute the array for all data into subarraies of different regions
 		Industry[] indusCA = new Industry[0];
 		Industry[] indusON = new Industry[0];
 		Industry[] indusBC = new Industry[0];
