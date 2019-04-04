@@ -87,6 +87,7 @@ public class Industry implements Comparable<Industry>{
 			Hourlyearning.readLine();
 			WeeklyHour.readLine();
 		}
+		//Transfer all relevant data to an array of abstract objects of type Industry 
 		Industry[] test = new Industry[51384];
 		line1 = Hourlyearning.readLine();
 		System.out.println(line1);
@@ -120,7 +121,7 @@ public class Industry implements Comparable<Industry>{
 			line2 = WeeklyHour.readLine();
 			
 		}
-		
+		//Distribute the 
 		Industry[] indusCA = new Industry[0];
 		Industry[] indusON = new Industry[0];
 		Industry[] indusBC = new Industry[0];
@@ -211,7 +212,7 @@ public class Industry implements Comparable<Industry>{
 		Sort.sortMergeTD(indusQC,indusQC.length);
 		Sort.sortMergeTD(indusNB,indusNB.length);
 		Sort.sortMergeTD(indusNS,indusNS.length);
-		
+		//Make the sample array "Canada 2017-12" for searching
 		Industry[] Sample = new Industry[0];
 		ArrayList<Industry> SampleLst = new ArrayList<Industry>(Arrays.asList(Sample));
 		for(Industry industry: indusCA) {
@@ -294,7 +295,7 @@ public class Industry implements Comparable<Industry>{
 			output.println(industry.toString());
 		}
 		output.println("A");*/
-		
+		//Print the 10 in-range industries' names and hourly earnings into output file
 		String[] namesInrange = new String[indusInrange.length];
 		for(int i = 0; i < indusInrange.length; i++ ) {
 			namesInrange[i] = indusInrange[i].Name();
@@ -303,7 +304,7 @@ public class Industry implements Comparable<Industry>{
 		
 		RelaventIndustries IndusGraph = new RelaventIndustries();
 		ArrayList<String> Recommendations = IndusGraph.giveRecommendations(namesInrange);
-		
+		//Print the recommended industries' (at most 10) names and hourly earnings into output file
 		output.println("Recommendations:");
 		for(String indusName: Recommendations) {
 			output.println(indusName);
