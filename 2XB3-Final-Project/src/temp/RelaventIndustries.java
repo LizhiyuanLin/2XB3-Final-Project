@@ -5,7 +5,7 @@ public class RelaventIndustries {
 	private SymbolGraph graph;
 	public RelaventIndustries(){
 		String path = new File("").getAbsolutePath();
-		graph = new SymbolGraph(path + "\\data\\graph.txt", ";");
+		graph = new SymbolGraph(path + "//Data//graph.txt", ";");
 	}
 	public ArrayList<String> giveRecommendations(String[] s) {
 		ArrayList<String> list = new ArrayList<String>();
