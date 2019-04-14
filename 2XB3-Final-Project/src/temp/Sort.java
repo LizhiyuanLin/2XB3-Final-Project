@@ -1,5 +1,13 @@
 package temp;
 
+/**
+ * The {@code Sort} class contains one method of Merge Sort: top-down 
+ * merge sort. The methods are implemented according to the 
+ * instruction and code given in the textbook section 2.2.
+ * 
+ * @author Mengtong Shi
+ *
+ */
 public class Sort {
 
 	// referred to Algorithms, 4th Edition, page 245

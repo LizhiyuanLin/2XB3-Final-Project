@@ -1,3 +1,4 @@
+package temp;
 //This is a class that referred to the textbook
 /******************************************************************************
  *  Compilation:  javac StdDraw.java
@@ -22,8 +23,6 @@
  *       images and strings
  *
  ******************************************************************************/
-
-package temp;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

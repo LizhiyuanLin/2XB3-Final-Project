@@ -1,9 +1,8 @@
+package temp;
 /*
  * This is a class that referred to the textbook
  * Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne
  */
-
-
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -21,7 +20,7 @@ import java.util.TreeMap;
  *  when associating a value with a key that is already in the symbol table,
  *  the convention is to replace the old value with the new value.
  *  Unlike {@link java.util.Map}, this class uses the convention that
- *  values cannot be {@code null}¡ªsetting the
+ *  values cannot be {@code null}ï¿½ï¿½setting the
  *  value associated with a key to {@code null} is equivalent to deleting the key
  *  from the symbol table.
  *  <p>

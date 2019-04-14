@@ -14,15 +14,15 @@ public class IndustryTest {
 	public void testSearch() {
 		fail("Not yet implemented");
 	}
-	
-	public void testGraphRecommendation(){
+
+	public void testGraphRecommendation() {
 		fail("Not yet implemented");
 	}
-	
+
 	public void testRelaventIndustries() {
 		fail("Not yet implemented");
 	}
-	
+
 	public void testIndustry() {
 		fail("Not yet implemented");
 	}
