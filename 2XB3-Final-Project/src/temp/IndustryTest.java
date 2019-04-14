@@ -84,7 +84,11 @@ public class IndustryTest {
 	 */
 	@Test
 	public void testIndustryRegion() {
-		fail("Not yet implemented");
+		assertEquals(industry1.region(), "Canada");
+		assertEquals(industry2.region(), "Canada");
+		assertEquals(industry3.region(), "Canada");
+		assertEquals(industry4.region(), "Canada");
+		assertEquals(industry5.region(), "Canada");
 	}
 
 	/**
@@ -92,7 +96,11 @@ public class IndustryTest {
 	 */
 	@Test
 	public void testIndustryHourlyEarn() {
-		fail("Not yet implemented");
+		assertTrue(industry1.WorkHour() == 30.66);
+		assertTrue(industry2.WorkHour() == 30.65);
+		assertTrue(industry3.WorkHour() == 30.66);
+		assertTrue(industry4.WorkHour() == 30.66);
+		assertTrue(industry5.WorkHour() == 30.65);
 	}
 
 	/**
@@ -100,7 +108,11 @@ public class IndustryTest {
 	 */
 	@Test
 	public void testIndustryWorkHour() {
-		fail("Not yet implemented");
+		assertTrue(industry1.HourlyEarn() == 40.3);
+		assertTrue(industry2.HourlyEarn() == 40.3);
+		assertTrue(industry3.HourlyEarn() == 40.3);
+		assertTrue(industry4.HourlyEarn() == 40.2);
+		assertTrue(industry5.HourlyEarn() == 40.2);
 	}
 
 	/**
