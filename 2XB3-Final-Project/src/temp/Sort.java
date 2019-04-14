@@ -54,7 +54,7 @@ public class Sort {
 	 * top-down merge sort using Comparable; referred to Algorithms, 4th Edition,
 	 * page 272-273
 	 * 
-	 * @param x - the input array containing products that need to be sorted.
+	 * @param x - the input array containing industries that need to be sorted.
 	 * @param n - the size of the input array
 	 */
 	public static void sortMergeTD(Comparable[] x, int n) {
