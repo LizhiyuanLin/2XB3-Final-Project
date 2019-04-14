@@ -70,9 +70,9 @@ public class Industry implements Comparable<Industry> {
 			return -1;
 		else if (this.WorkHour > j.WorkHour)
 			return 1;
-		else if (this.Overtime == true && j.Overtime == false)
-			return -1;
 		else if (this.Overtime == false && j.Overtime == true)
+			return -1;
+		else if (this.Overtime == true && j.Overtime == false)
 			return 1;
 		return 0;
 	}
