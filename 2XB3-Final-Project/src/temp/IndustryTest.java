@@ -25,6 +25,8 @@ public class IndustryTest {
 		industry3 = new Industry("testIndustry3", "Canada", 30.66, 40.3, "2017-12", true);
 		industry4 = new Industry("testIndustry4", "Canada", 30.66, 40.2, "2017-12", true);
 		industry5 = new Industry("testIndustry5", "Canada", 30.65, 40.4, "2017-12", true);
+		
+		Industry indLst[] = {industry0, industry1, industry2, industry3, industry4, industry5}; 
 	}
 
 	/**
