@@ -17,6 +17,11 @@ public class IndustryTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
+		Industry industry1 = new Industry("testIndustry1", "Canada", 30.66, 40.3, "2017-12", false);
+		Industry industry2 = new Industry("testIndustry2", "Canada", 30.65, 40.3, "2017-12", false);
+		Industry industry3 = new Industry("testIndustry3", "Canada", 30.66, 40.3, "2017-12", true);
+		Industry industry4 = new Industry("testIndustry4", "Canada", 30.66, 40.2, "2017-12", true);
+		Industry industry5 = new Industry("testIndustry5", "Canada", 30.65, 40.2, "2017-12", true);
 	}
 
 	/**
