@@ -1,4 +1,9 @@
 package temp;
+/*
+ * This is a class that referred to the textbook
+ * Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne
+ */
+
 /**
  *  The {@code SymbolGraph} class represents an undirected graph, where the
  *  vertex names are arbitrary strings.
