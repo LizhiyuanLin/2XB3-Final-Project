@@ -178,9 +178,9 @@ public class IndustryTest {
 		assertTrue(industry3.compareTo(industry5) < 0);
 		assertTrue(industry4.compareTo(industry5) < 0);
 		assertTrue(industry2.compareTo(industry5) < 0);
+		assertTrue(industry1.compareTo(industry3) < 0);
+		assertTrue(industry0.compareTo(industry3) < 0);
 		assertTrue(industry3.compareTo(industry4) > 0);
-		assertTrue(industry1.compareTo(industry3) > 0);
 		assertTrue(industry1.compareTo(industry4) > 0);
-		assertTrue(industry0.compareTo(industry3) > 0);
 	}
 }
