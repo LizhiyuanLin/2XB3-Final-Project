@@ -11,17 +11,19 @@ import org.junit.Test;
  */
 
 public class IndustryTest {
-	
+
+	Industry industry1, industry2, industry3, industry4, industry5;
+
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
-		Industry industry1 = new Industry("testIndustry1", "Canada", 30.66, 40.3, "2017-12", false);
-		Industry industry2 = new Industry("testIndustry2", "Canada", 30.65, 40.3, "2017-12", false);
-		Industry industry3 = new Industry("testIndustry3", "Canada", 30.66, 40.3, "2017-12", true);
-		Industry industry4 = new Industry("testIndustry4", "Canada", 30.66, 40.2, "2017-12", true);
-		Industry industry5 = new Industry("testIndustry5", "Canada", 30.65, 40.2, "2017-12", true);
+		industry1 = new Industry("testIndustry1", "Canada", 30.66, 40.3, "2017-12", false);
+		industry2 = new Industry("testIndustry2", "Canada", 30.65, 40.3, "2017-12", false);
+		industry3 = new Industry("testIndustry3", "Canada", 30.66, 40.3, "2017-12", true);
+		industry4 = new Industry("testIndustry4", "Canada", 30.66, 40.2, "2017-12", true);
+		industry5 = new Industry("testIndustry5", "Canada", 30.65, 40.2, "2017-12", true);
 	}
 
 	/**
@@ -32,7 +34,8 @@ public class IndustryTest {
 	}
 
 	/**
-	 * Test method for {@link temp.Search#printout(temp.Industry[], java.lang.Double)}.
+	 * Test method for
+	 * {@link temp.Search#printout(temp.Industry[], java.lang.Double)}.
 	 */
 	@Test
 	public void testSearchPrintout() {
@@ -48,7 +51,8 @@ public class IndustryTest {
 	}
 
 	/**
-	 * Test method for {@link temp.RelaventIndustries#giveRecommendations(java.lang.String[])}.
+	 * Test method for
+	 * {@link temp.RelaventIndustries#giveRecommendations(java.lang.String[])}.
 	 */
 	@Test
 	public void testRIGiveRecommendations() {
@@ -68,7 +72,11 @@ public class IndustryTest {
 	 */
 	@Test
 	public void testIndustryName() {
-		fail("Not yet implemented");
+		assertEquals(industry1.Name(), "testIndustry1");
+		assertEquals(industry2.Name(), "testIndustry2");
+		assertEquals(industry3.Name(), "testIndustry3");
+		assertEquals(industry4.Name(), "testIndustry4");
+		assertEquals(industry5.Name(), "testIndustry5");
 	}
 
 	/**
