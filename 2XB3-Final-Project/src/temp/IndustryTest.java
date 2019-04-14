@@ -2,17 +2,22 @@ package temp;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 /*
- * Test cases for Assignment and Textbook reference code are omitted for simplicity.
+ * Test cases for Assignment and Textbook referenced code are omitted for simplicity.
  */
 
 public class IndustryTest {
 
-	Industry industry0, industry1, industry2, industry3, industry4, industry5;
+	Industry industry0, industry1, industry2, industry3, industry4, industry5, industry6, industry7, industry8,industry9, industry10;
 
 	/**
 	 * @throws java.lang.Exception
@@ -25,8 +30,11 @@ public class IndustryTest {
 		industry3 = new Industry("testIndustry3", "Canada", 30.66, 40.3, "2017-12", true);
 		industry4 = new Industry("testIndustry4", "Canada", 30.66, 40.2, "2017-12", true);
 		industry5 = new Industry("testIndustry5", "Canada", 30.65, 40.4, "2017-12", true);
-		
-		Industry indLst[] = {industry0, industry1, industry2, industry3, industry4, industry5}; 
+		industry6 = new Industry("testIndustry6", "Canada", 20.26, 40.1, "2017-12", false);
+		industry7 = new Industry("testIndustry7", "Canada", 17.36, 40.1, "2017-11", false);
+		industry8 = new Industry("testIndustry8", "Canada", 25.72, 40.1, "2017-12", true);
+		industry9 = new Industry("testIndustry9", "Canada", 31.93, 40.1, "2017-11", false);
+		industry10 = new Industry("testIndustry10", "Canada", 19.47, 40.1, "2017-12", true);
 	}
 
 	/**
@@ -42,15 +50,27 @@ public class IndustryTest {
 	 */
 	@Test
 	public void testSearchPrintout() {
-		fail("Not yet implemented");
-	}
+		Industry indLst[] = {industry0, industry1, industry2, industry3, industry4, industry5,
+				industry6, industry7, industry8, industry9, industry10}; 
+		Sort.sortMergeTD(indLst, indLst.length);
+		Industry result1[] = Search.printout(indLst,-32.2);
+		
+		// Every member of result is contained in original array
+		for (int i = 0; i < result1.length; i++) {
+			assertTrue(Arrays.asList(indLst).contains(result1[i]));
+		}
+		// this specific test case should not contain testIndustry9 in the result array.
+		assertFalse(Arrays.asList(result1).contains(indLst[0]));
+		
+		//regular case
+		Industry result2[] = Search.printout(indLst,30.65);
+		for (int i = 0; i < result1.length; i++) {
+			assertTrue(Arrays.asList(indLst).contains(result1[i]));
+		}
+		
+		// edge case
+		assertTrue(Search.printout(null,-32.2) == null);
 
-	/**
-	 * Test method for {@link temp.RelaventIndustries#RelaventIndustries()}.
-	 */
-	@Test
-	public void testRIRelaventIndustries() {
-		fail("Not yet implemented");
 	}
 
 	/**
@@ -59,16 +79,15 @@ public class IndustryTest {
 	 */
 	@Test
 	public void testRIGiveRecommendations() {
-		fail("Not yet implemented");
+		RelaventIndustries RelInd = new RelaventIndustries();
+		String name[] = {"Sound recording industries","Forestry and logging"};
+		ArrayList<String> recmd = RelInd.giveRecommendations(name);
+		Iterator i = recmd.iterator();
+		while(i.hasNext()) {
+			assertTrue(RelInd.getGraph().contains(i.next().toString()));
+		}
 	}
 
-	/**
-	 * Test method for {@link temp.RelaventIndustries#getGraph()}.
-	 */
-	@Test
-	public void testRIGetGraph() {
-		fail("Not yet implemented");
-	}
 
 	/**
 	 * Test method for {@link temp.Industry#Name()}.
