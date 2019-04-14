@@ -96,11 +96,11 @@ public class IndustryTest {
 	 */
 	@Test
 	public void testIndustryHourlyEarn() {
-		assertTrue(industry1.WorkHour() == 30.66);
-		assertTrue(industry2.WorkHour() == 30.65);
-		assertTrue(industry3.WorkHour() == 30.66);
-		assertTrue(industry4.WorkHour() == 30.66);
-		assertTrue(industry5.WorkHour() == 30.65);
+		assertTrue(Math.abs(industry1.HourlyEarn() - 30.66) <= 0.0005);
+		assertTrue(Math.abs(industry2.HourlyEarn() - 30.65) <= 0.0005);
+		assertTrue(Math.abs(industry3.HourlyEarn() - 30.66) <= 0.0005);
+		assertTrue(Math.abs(industry4.HourlyEarn() - 30.66) <= 0.0005);
+		assertTrue(Math.abs(industry5.HourlyEarn() - 30.65) <= 0.0005);
 	}
 
 	/**
@@ -108,11 +108,11 @@ public class IndustryTest {
 	 */
 	@Test
 	public void testIndustryWorkHour() {
-		assertTrue(industry1.HourlyEarn() == 40.3);
-		assertTrue(industry2.HourlyEarn() == 40.3);
-		assertTrue(industry3.HourlyEarn() == 40.3);
-		assertTrue(industry4.HourlyEarn() == 40.2);
-		assertTrue(industry5.HourlyEarn() == 40.2);
+		assertTrue(Math.abs(industry1.WorkHour() - 40.3) <= 0.005);
+		assertTrue(Math.abs(industry2.WorkHour() - 40.3) <= 0.005);
+		assertTrue(Math.abs(industry3.WorkHour() - 40.3) <= 0.005);
+		assertTrue(Math.abs(industry4.WorkHour() - 40.2) <= 0.005);
+		assertTrue(Math.abs(industry5.WorkHour() - 40.2) <= 0.005);
 	}
 
 	/**
@@ -120,7 +120,11 @@ public class IndustryTest {
 	 */
 	@Test
 	public void testIndustryTime() {
-		fail("Not yet implemented");
+		assertEquals(industry1.Time(), "2017-12");
+		assertEquals(industry2.Time(), "2017-12");
+		assertEquals(industry3.Time(), "2017-12");
+		assertEquals(industry4.Time(), "2017-12");
+		assertEquals(industry5.Time(), "2017-12");
 	}
 
 	/**
