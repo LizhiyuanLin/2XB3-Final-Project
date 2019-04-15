@@ -14,7 +14,6 @@ public class Search {
         while (lo <= hi) {
             // Key is in a[lo..hi] or not present.
             mid = lo + (hi - lo) / 2;
-            //System.out.println(mid);
             if      (key > a[mid].HourlyEarn()) hi = mid - 1;
             else if (key < a[mid].HourlyEarn()) lo = mid + 1;
             else return mid;
