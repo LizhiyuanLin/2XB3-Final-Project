@@ -229,51 +229,6 @@ public class Industry implements Comparable<Industry> {
 		Industry[] indusInrange = Search.printout(Sample, wantedWage);
 		System.out.println(indusInrange.length);
 
-		/*
-		 * for(Industry industry: indusCA ) { output.println(industry.toString());
-		 * 
-		 * } output.println();
-		 * 
-		 * for(Industry industry: indusON ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusBC ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusAB ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusMB ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusSK ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusYT ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusNT ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusNL ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusNU ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusPE ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusQC ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusNB ) { output.println(industry.toString()); }
-		 * output.println();
-		 * 
-		 * for(Industry industry: indusNS ) { output.println(industry.toString()); }
-		 * output.println("A");
-		 */
-
 		// Search result list (industry names)
 		String[] namesInrange = new String[indusInrange.length];
 		for (int i = 0; i < indusInrange.length; i++) {
