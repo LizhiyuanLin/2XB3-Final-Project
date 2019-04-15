@@ -10,7 +10,6 @@ public class Search {
     public static int indexOf(Industry[] a, Double key) {
         int lo = 0;
         int hi = a.length - 1;
-        //System.out.println(hi);
         int mid = 0;
         while (lo <= hi) {
             // Key is in a[lo..hi] or not present.
@@ -20,8 +19,6 @@ public class Search {
             else if (key < a[mid].HourlyEarn()) lo = mid + 1;
             else return mid;
         }
-        //System.out.println("B");
-        //System.out.println(mid);
         return mid;
     }
     
@@ -43,7 +40,6 @@ public class Search {
     	}
     	else {
     		int j = indexOf(a, wantedWage);//value of mid
-    		//System.out.println(j);
     		for (int i = j-5; i < j ; i++) {
     			if (i > 0) { 
     				if (a[i].HourlyEarn() > 0.0) {
